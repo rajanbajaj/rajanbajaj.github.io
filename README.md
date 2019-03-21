@@ -1,2 +1,2 @@
 # rajanbajaj.github.io
-  It is a redirection to my wordpress blog.
+  It is website for course Deep Learning and its Applications.
