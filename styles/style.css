@@ -267,3 +267,12 @@ a:hover {
   h6 {
     background-color: #312f40;  
   }
+
+  .caption {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .subtopic {
+    margin-top: 10px;
+  }
