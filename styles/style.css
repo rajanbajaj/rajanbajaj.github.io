@@ -170,7 +170,7 @@ section {
   text-indent: 8px;
   background-color: #694ba1;
   border-bottom: 1px solid #eee;
-  paddind: 0 10px; }
+  padding: 0 10px; }
 
 .wid-body {
   padding: 10px;
@@ -220,7 +220,7 @@ li > a {
   width: 100%; }
 
 .poster > img {
-  verticle-align: middle; }
+  vertical-align: middle; }
 
 .page {
   padding: 2%;
@@ -276,3 +276,4 @@ a:hover {
   .subtopic {
     margin-top: 10px;
   }
+  
