@@ -1,0 +1,2 @@
+(()=>{"use strict";$((()=>{let t=["/api/members/count","/api/posts/count","/api/media/count","/api/media-group/count"],e=0,o=[];t.forEach((t=>{$.get("https://learndottogether.herokuapp.com"+t,(a=>{e++,o[t]=a}))}));let a=setInterval(((m=e)=>{4===m&&($("#members-count").html(o[t[0]]),$("#posts-count").html(o[t[1]]),$("#media-count").html(o[t[2]]),$("#media-group-count").html(o[t[3]]),clearInterval(a))}),30)}))})();
+//# sourceMappingURL=main.af540cb76db2693bef35.bundle.js.map

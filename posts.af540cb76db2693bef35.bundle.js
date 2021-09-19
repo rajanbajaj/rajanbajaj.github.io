@@ -1,0 +1,2 @@
+(()=>{"use strict";$((()=>{let t="https://learndottogether.herokuapp.com",e=null;$.get(t+"/api/posts/latest",(t=>{e=t}));let l=setInterval(((s=e)=>{if(null!==e){if(e.title&&$("#post-title").html(e.title),e.body){let l=e.body.replace('src="','src="'+t+"/");$("#post-body").html(l)}clearInterval(l)}}),30)}))})();
+//# sourceMappingURL=posts.af540cb76db2693bef35.bundle.js.map
