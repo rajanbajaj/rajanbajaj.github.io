@@ -27,7 +27,7 @@
   var copyBtn = document.getElementById("copy-email");
   if (copyBtn && navigator.clipboard) {
     copyBtn.addEventListener("click", function () {
-      navigator.clipboard.writeText("rajanbajajkota@gmail.com").then(
+      navigator.clipboard.writeText("rajanbajajkota+consultations@gmail.com").then(
         function () {
           copyBtn.textContent = "Copied ✓";
           setTimeout(function () { copyBtn.textContent = "Copy address"; }, 2000);
@@ -72,7 +72,7 @@
       var subject = "Office hours request: " + topic;
       var body = "Hi Rajan,\n\nName: " + name + "\nEmail: " + email
         + "\nTopic: " + topic + "\n\nContext:\n" + msg;
-      var href = "mailto:rajanbajajkota@gmail.com?subject="
+      var href = "mailto:rajanbajajkota+consultations@gmail.com?subject="
         + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
       if (sendLink) sendLink.setAttribute("href", href);
       if (doneBox) {

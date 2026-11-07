@@ -161,9 +161,16 @@ h2 {
 .field { margin: 0 0 .9rem; display: grid; gap: .3rem; }
 .field label { font-size: .88rem; font-weight: 600; }
 .field input, .field select, .field textarea {
-  font: inherit; font-size: .95rem; color: var(--ink);
+  font: inherit; font-size: 1rem; color: var(--ink);
   background: var(--paper); border: 1px solid var(--line); border-radius: 8px;
   padding: .55rem .7rem; width: 100%;
+}
+.field input:-webkit-autofill,
+.field input:-webkit-autofill:hover,
+.field input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--ink);
+  -webkit-box-shadow: 0 0 0 3rem var(--paper) inset;
+  transition: background-color 9999s ease-in-out 0s;
 }
 .field textarea { resize: vertical; }
 .field-error { color: #9c2b1e; font-size: .9rem; margin: 0 0 .9rem; }
