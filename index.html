@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rajan Bajaj — Senior Backend &amp; Data Engineer</title>
+<meta name="description" content="Rajan Bajaj, senior backend and data engineer. High-throughput data platforms, multi-tenant SaaS, ad-tech reporting. IIT Mandi alumnus, based in Gurugram, Haryana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f5c46'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='17' fill='white' text-anchor='middle'%3ERB%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head" id="top">
+  <div class="wrap head-in">
+    <a class="brand" href="#top" aria-label="Rajan Bajaj, home">
+      <span class="brand-mark" aria-hidden="true">RB</span>
+      <span class="brand-name">Rajan Bajaj</span>
+    </a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#openlens">OpenLens</a>
+      <a href="#projects">Projects</a>
+      <a href="#writing">Writing</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Sections, mobile" hidden>
+    <a href="#experience">Experience</a>
+    <a href="#openlens">OpenLens</a>
+    <a href="#projects">Projects</a>
+    <a href="#writing">Writing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <section class="hero" aria-labelledby="intro-name">
+      <div class="hero-main">
+        <p class="hero-loc">Gurugram, Haryana · <a href="mailto:rajanbajajkota@gmail.com">rajanbajajkota@gmail.com</a></p>
+        <h1 id="intro-name">Rajan Bajaj</h1>
+        <p class="hero-role">Senior backend &amp; data engineer. I build high-throughput data platforms and multi-tenant SaaS, and own them end to end — pipelines, APIs, identity, and UI.</p>
+        <p class="hero-links">
+          <a class="btn" href="mailto:rajanbajajkota@gmail.com">Get in touch</a>
+          <a href="https://github.com/rajanbajaj">GitHub</a>
+          <a href="https://www.linkedin.com/in/rajan-bajaj-b7b3b2133/">LinkedIn</a>
+          <a href="https://x.com/_artisticmonk">X</a>
+          <a href="https://rbajaj97.medium.com/">Medium</a>
+        </p>
+        <dl class="hero-stats">
+          <div><dt>6 yrs</dt><dd>backend &amp; data engineering</dd></div>
+          <div><dt>2.45B+</dt><dd>raw records turned into queryable inventory</dd></div>
+          <div><dt>−97.5%</dt><dd>mean API latency, ClickHouse redesign</dd></div>
+          <div><dt>$144K/yr</dt><dd>infra spend removed at previous role</dd></div>
+        </dl>
+      </div>
+      <aside class="hero-side" aria-label="At a glance">
+        <ul>
+          <li><span>Now</span>Open to new roles — previously Senior Backend Engineer, iion (ad tech)</li>
+          <li><span>Before</span>Software Development Engineer, manaable (LMS SaaS, 120+ orgs)</li>
+          <li><span>School</span>B.Tech CSE, IIT Mandi ’20, minor in Management</li>
+          <li><span>Elsewhere</span><a href="https://artisticmonk.in">artisticmonk.in</a> · <a href="https://search.artisticmonk.in">search.artisticmonk.in</a></li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="about" aria-labelledby="about-h">
+      <h2 id="about-h"><span class="sec-num">01</span> About</h2>
+      <p>Senior backend and data engineer with 6 years of experience building high-throughput data platforms and multi-tenant SaaS. My track record: cutting latency by 15× to 97%, removing six-figure annual cloud spend, and replacing manual ops workflows — CSV/ETL, biometric verification, third-party integrations — with automation. Comfortable across async job pipelines, real-time APIs, OAuth2/SSO identity infrastructure, ML-integrated services, and frontend.</p>
+    </section>
+
+    <section id="experience" aria-labelledby="exp-h">
+      <h2 id="exp-h"><span class="sec-num">02</span> Experience</h2>
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <h3>Senior Backend Engineer — iion, Ad Tech (SSP / DSP Reporting)</h3>
+            <p class="job-sub">Inventory discovery, deal &amp; delivery reporting</p>
+          </div>
+          <p class="job-when">May 2025 – Oct 2026</p>
+        </div>
+        <ul>
+          <li>Owned the inventory discovery platform end to end — ingestion pipelines, backend APIs, analytics UI — turning <strong>2.45B+ raw records</strong> from five external integrations into curated inventory that sales and AdOps query directly.</li>
+          <li>Replaced a multi-day quarterly ops-run Excel + MongoDB workflow with automated daily processing: inventory insight went from a <strong>90-day refresh cycle to 24 hours</strong>.</li>
+          <li>Cut inventory API mean latency <strong>97.5% (19.36s → 490ms)</strong> and p95 94.9% via ClickHouse schema redesign — partitioning, LowCardinality types, materialized views, projections — sustaining 25 req/s at 100% success under load.</li>
+          <li>Made <strong>202.1B ad requests</strong> queryable at region/country/state/city level over an automated rolling 30-day window using 943K+ geographic mappings.</li>
+          <li>Built a single source of truth for inventory classification: 58.5K+ app bundles enriched via App Store / Play APIs, normalized country, genre, and age-rating taxonomies.</li>
+          <li>Closed a revenue-attribution gap with unified deal reporting across GAM and PubMatic/PLL; diagnosed a PubMatic API defect silently dropping deal IDs and backfilled history.</li>
+          <li>Shipped the daily reporting backbone — delivery, reach, attention, brand-lift, deal ingestion and APIs — plus reach logic and Aniview viewability integration; introduced Celery async processing and an S3-backed batch logger.</li>
+        </ul>
+      </article>
+      <article class="job">
+        <div class="job-head">
+          <div>
+            <h3>Software Development Engineer — manaable, Learning-Management SaaS</h3>
+            <p class="job-sub">Multi-tenant training-management platform, 120+ organizations</p>
+          </div>
+          <p class="job-when">Aug 2020 – Apr 2025</p>
+        </div>
+        <ul>
+          <li>Owned end-to-end architecture across a Laravel/PHP API, Vue 3/TypeScript frontend, and MySQL/Redis data layer.</li>
+          <li>Designed and built a standalone <strong>OAuth2/SSO authorization server</strong> (Laravel Passport) from scratch — shared identity provider across consumer, vendor, admin, and Django examination apps; authorization-code flow, custom JWT claims injection for tenant context, multi-client credentials, machine-to-machine API keys.</li>
+          <li>Cut infra cost <strong>75% ($16K/mo → $4K/mo, $144K/yr)</strong> by re-architecting the AWS platform: 100+ RDS instances to Aurora Serverless v2, per-client EC2 to ECS/Fargate with autoscaling and CodePipeline delivery.</li>
+          <li>Made CSV ingestion of 50K rows × 100+ columns reliable at 5M+ field validations per file — chunked validation, queue-based batch jobs, cached state, failure recovery, transactional writes.</li>
+          <li>Reduced high-traffic endpoint latency <strong>4s → under 1s</strong> with backward-compatible REST design and query consolidation across 75+ controllers.</li>
+          <li>Built real-time and ML-integrated features: WebSocket/Pusher live notifications; AWS Rekognition facial-recognition attendance with client-side pre-validation (face-api.js/OpenCV).</li>
+          <li>Led delivery of a containerized Python/Django examination platform integrated with the SSO server; mentored a junior developer; standardized Docker dev across five services, cutting onboarding 50% and setup from 3+ hours to under 15 minutes.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="openlens" class="spotlight" aria-labelledby="ol-h">
+      <h2 id="ol-h"><span class="sec-num">03</span> Spotlight: OpenLens</h2>
+      <p class="spot-kicker">Private AI search engine · Meta Global AI Developer Hackathon · Oct – Nov 2026</p>
+      <p>OpenLens is a self-hosted search engine over your own crawl, with an Agentic AI Mode on Muse Spark. A 10-stage pipeline — parse, rewrite, retrieval, normalize, dedupe, filter, score, rank, enrich, explain — sits behind stable plugin/provider interfaces (Python/FastAPI, Postgres custom index with <code>plainto_tsquery</code> + <code>ts_rank</code>, React/Vite, Docker Compose).</p>
+      <ul class="spot-list">
+        <li><strong>Agentic mode:</strong> dependency-free OpenAI-compatible client for query rewrite, budgeted index tools, and cited synthesis with extractive fallback — fail-closed to standard results with typed <code>ProviderError</code> envelopes.</li>
+        <li><strong>Distributed crawl fleet:</strong> Postgres frontier (120s leases, heartbeats, priority dequeue) + Kafka consumer groups, robots/page-budget gates, 5s fetch bound, retry on 429/5xx only, ClickHouse analytics sink, Redis result cache.</li>
+        <li><strong>Debugged in prod</strong> from <code>pg_stat_activity</code> and broker logs: leaked-idle-transaction wedge, missing-index dashboard, queue-cap eviction deadlock; consolidated 3 KRaft brokers to 1.</li>
+        <li><strong>Release gates:</strong> tag-only serialized releases, ruff + mypy zero-error, offline pytest with fakes, vitest + tsc, pip/npm audit, gitleaks.</li>
+      </ul>
+      <p class="spot-links">
+        <a class="btn btn-light" href="https://search.artisticmonk.in">Try it live</a>
+        <a href="https://www.youtube.com/watch?v=8J1IAJMVaL8">Demo video</a>
+        <a href="https://github.com/rajanbajaj/openlens">Source on GitHub</a>
+      </p>
+    </section>
+
+    <section id="projects" aria-labelledby="proj-h">
+      <h2 id="proj-h"><span class="sec-num">04</span> Selected projects</h2>
+      <ul class="proj-list">
+        <li>
+          <div><a href="https://github.com/rajanbajaj/rajan_nse">rajan_nse</a><span class="tag">Python · PyPI</span></div>
+          <p>Python package for NSE calculations — my most-starred repo.</p>
+        </li>
+        <li>
+          <div><a href="https://github.com/rajanbajaj/rajan_screener">rajan_screener</a><span class="tag">Python</span></div>
+          <p>Pull Indian stock-market data via screener.in into Python workflows.</p>
+        </li>
+        <li>
+          <div><a href="https://github.com/rajanbajaj/fastapi-microservices-guide">fastapi-microservices-guide</a><span class="tag">Guide</span></div>
+          <p>Learning guide: FastAPI microservices architecture, directory structures, domain vs. database models, pipelines.</p>
+        </li>
+        <li>
+          <div><a href="https://github.com/rajanbajaj/chart_app">chart_app</a><span class="tag">HTML · JS</span></div>
+          <p>Replay historical NSE data one day at a time to simulate daily ticks.</p>
+        </li>
+        <li>
+          <div><a href="https://github.com/rajanbajaj/adhd-toolkits">adhd-toolkits</a><span class="tag">HTML</span></div>
+          <p>Small toolkit pages built for focus and daily structure.</p>
+        </li>
+        <li>
+          <div><a href="https://github.com/rajanbajaj/weather-reporting-service">weather-reporting-service</a><span class="tag">Node.js</span></div>
+          <p>Scheduled weather-reporting app on Node.js.</p>
+        </li>
+      </ul>
+      <p class="more"><a href="https://github.com/rajanbajaj?tab=repositories">All 35 repositories on GitHub →</a></p>
+    </section>
+
+    <section id="writing" aria-labelledby="w-h">
+      <h2 id="w-h"><span class="sec-num">05</span> Writing &amp; notes</h2>
+      <ul class="write-list">
+        <li>
+          <a href="https://rbajaj97.medium.com/back-to-fundamentals-journaling-to-give-my-thoughts-a-structure-fbb8986baabb">Back to fundamentals: journaling to give my thoughts a structure</a>
+          <span>Medium · Oct 2026 · on self-awareness and going back to basics</span>
+        </li>
+        <li>
+          <a href="https://x.com/_artisticmonk">Posts as @_artisticmonk</a>
+          <span>X · 100 posts · build logs for OpenLens, notes on reading, sport, and everyday observation</span>
+        </li>
+        <li>
+          <a href="https://artisticmonk.in">artisticmonk.in</a>
+          <span>Personal site &amp; blog — essays, notes, and experiments</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="skills" aria-labelledby="sk-h">
+      <h2 id="sk-h"><span class="sec-num">06</span> Technical skills</h2>
+      <div class="skill-groups">
+        <div><h3>Languages</h3><p>Python · SQL · JavaScript · PHP · Bash</p></div>
+        <div><h3>Data</h3><p>PostgreSQL · ClickHouse (partitioning, materialized views, projections, ReplacingMergeTree) · MySQL · MongoDB · Parquet · S3-backed pipelines · chunked &amp; streaming file processing</p></div>
+        <div><h3>Backend</h3><p>FastAPI · Laravel · Pydantic · Celery · Redis · Kafka · REST design · OAuth2/SSO · multi-tenancy · OpenAPI · agentic RAG (Muse Spark)</p></div>
+        <div><h3>Frontend &amp; testing</h3><p>React · Vue 3 · Pinia · Tailwind CSS · PHPUnit · Playwright · Cypress</p></div>
+        <div><h3>Cloud &amp; DevOps</h3><p>AWS (S3, EC2, RDS/Aurora, ECS/Fargate, ECR, CodePipeline, CodeBuild) · Cloudflare R2 · Docker · Jenkins · Supervisor · Prometheus · Git</p></div>
+        <div><h3>Education</h3><p>B.Tech CSE, IIT Mandi ’16–’20 · minor in Management · CGPA 7.64/10</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="c-h">
+      <h2 id="c-h"><span class="sec-num">07</span> Contact</h2>
+      <p class="contact-lede">The fastest way to reach me is email. I’m happy to talk about backend &amp; data roles, ad-tech measurement, or open source.</p>
+      <p class="contact-row">
+        <a class="btn" href="mailto:rajanbajajkota@gmail.com">rajanbajajkota@gmail.com</a>
+        <button class="copy-btn" id="copy-email" type="button">Copy address</button>
+      </p>
+      <ul class="socials">
+        <li><a href="https://github.com/rajanbajaj" aria-label="GitHub"><svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/rajan-bajaj-b7b3b2133/" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>LinkedIn</a></li>
+        <li><a href="https://x.com/_artisticmonk" aria-label="X"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41Z"/></svg>X · @_artisticmonk</a></li>
+        <li><a href="https://rbajaj97.medium.com/" aria-label="Medium"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M13.98 11.5c0 3.63-2.87 6.58-6.4 6.58-3.54 0-6.41-2.95-6.41-6.58s2.87-6.57 6.4-6.57c3.54 0 6.41 2.94 6.41 6.57ZM21.71 11.5c0 3.35-1.46 6.07-3.26 6.07s-3.26-2.72-3.26-6.07 1.46-6.07 3.26-6.07 3.26 2.72 3.26 6.07ZM23.7 11.5c0 3.03-.63 5.49-1.4 5.49-.78 0-1.41-2.46-1.41-5.49s.63-5.49 1.4-5.49c.78 0 1.41 2.46 1.41 5.49Z"/></svg>Medium</a></li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-in">
+    <p>© <span id="year">2026</span> Rajan Bajaj · Gurugram, Haryana</p>
+    <p><a href="#top">Back to top ↑</a></p>
+  </div>
+</footer>
+<script src="site.js" defer></script>
+</body>
+</html>
