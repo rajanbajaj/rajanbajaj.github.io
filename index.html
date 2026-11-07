@@ -24,6 +24,7 @@
       <a href="#openlens">OpenLens</a>
       <a href="#projects">Projects</a>
       <a href="#writing">Writing</a>
+      <a href="#office-hours">Office Hours</a>
       <a href="#contact">Contact</a>
     </nav>
     <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
@@ -33,6 +34,7 @@
     <a href="#openlens">OpenLens</a>
     <a href="#projects">Projects</a>
     <a href="#writing">Writing</a>
+    <a href="#office-hours">Office Hours</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -40,9 +42,15 @@
 <main id="main">
   <div class="wrap">
     <section class="hero" aria-labelledby="intro-name">
+      <canvas id="flow" class="hero-canvas" aria-hidden="true"></canvas>
       <div class="hero-main">
-        <p class="hero-loc">Gurugram, Haryana · <a href="mailto:rajanbajajkota@gmail.com">rajanbajajkota@gmail.com</a></p>
-        <h1 id="intro-name">Rajan Bajaj</h1>
+        <div class="hero-id">
+          <img class="hero-photo" src="profile.jpg" alt="Portrait of Rajan Bajaj" width="112" height="112">
+          <div>
+            <h1 id="intro-name">Rajan Bajaj</h1>
+            <p class="hero-loc">Gurugram, Haryana · <a href="mailto:rajanbajajkota@gmail.com">rajanbajajkota@gmail.com</a></p>
+          </div>
+        </div>
         <p class="hero-role">Senior backend &amp; data engineer. I build high-throughput data platforms and multi-tenant SaaS, and own them end to end — pipelines, APIs, identity, and UI.</p>
         <p class="hero-links">
           <a class="btn" href="mailto:rajanbajajkota@gmail.com">Get in touch</a>
@@ -179,8 +187,57 @@
       </ul>
     </section>
 
+    <section id="office-hours" aria-labelledby="oh-h">
+      <h2 id="oh-h"><span class="sec-num">06</span> Office hours</h2>
+      <p class="oh-lede">Free 1:1s for students and junior engineers — technical consultations, project reviews, and professional chats. I’m opening these up to gain mentoring experience, so they cost nothing for now. (If this ever becomes a paid offering, this page will say so plainly.)</p>
+      <ul class="oh-list">
+        <li>
+          <div><strong>Technical consultation</strong><span class="tag">30 min · video call</span></div>
+          <p>Stuck on a backend, data, or API design problem? Bring the code or the error message and we’ll work through it together.</p>
+        </li>
+        <li>
+          <div><strong>Project review</strong><span class="tag">45 min · video call</span></div>
+          <p>A review of your side project or college project — architecture, code structure, and what I’d do next in your place. Share a repo link in the form below.</p>
+        </li>
+        <li>
+          <div><strong>Professional chat</strong><span class="tag">20 min · video call</span></div>
+          <p>Career questions, résumé feedback, preparing for backend interviews, or figuring out what to learn next.</p>
+        </li>
+      </ul>
+      <form id="slot-form" class="oh-form" novalidate>
+        <h3>Request a slot</h3>
+        <p class="oh-note">I reply within a few days with a time. Evenings IST work best.</p>
+        <p class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </p>
+        <p class="field">
+          <label for="f-email">Your email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </p>
+        <p class="field">
+          <label for="f-topic">What’s this about?</label>
+          <select id="f-topic" name="topic">
+            <option>Technical consultation (30 min)</option>
+            <option>Project review (45 min)</option>
+            <option>Professional chat (20 min)</option>
+          </select>
+        </p>
+        <p class="field">
+          <label for="f-msg">Context or repo link</label>
+          <textarea id="f-msg" name="message" rows="4" required placeholder="What are you working on? Paste a GitHub link if there is one."></textarea>
+        </p>
+        <p class="field-error" id="slot-error" role="alert" hidden></p>
+        <p><button class="btn" type="submit">Request a slot</button></p>
+      </form>
+      <div class="oh-done" id="slot-done" hidden>
+        <p><strong>Request ready.</strong> Your email app should have opened with everything filled in — just hit send.</p>
+        <p><a class="btn" id="slot-link" href="#">Open your email app</a></p>
+      </div>
+    </section>
+
     <section class="skills" aria-labelledby="sk-h">
-      <h2 id="sk-h"><span class="sec-num">06</span> Technical skills</h2>
+      <h2 id="sk-h"><span class="sec-num">07</span> Technical skills</h2>
       <div class="skill-groups">
         <div><h3>Languages</h3><p>Python · SQL · JavaScript · PHP · Bash</p></div>
         <div><h3>Data</h3><p>PostgreSQL · ClickHouse (partitioning, materialized views, projections, ReplacingMergeTree) · MySQL · MongoDB · Parquet · S3-backed pipelines · chunked &amp; streaming file processing</p></div>
@@ -192,7 +249,7 @@
     </section>
 
     <section id="contact" class="contact" aria-labelledby="c-h">
-      <h2 id="c-h"><span class="sec-num">07</span> Contact</h2>
+      <h2 id="c-h"><span class="sec-num">08</span> Contact</h2>
       <p class="contact-lede">The fastest way to reach me is email. I’m happy to talk about backend &amp; data roles, ad-tech measurement, or open source.</p>
       <p class="contact-row">
         <a class="btn" href="mailto:rajanbajajkota@gmail.com">rajanbajajkota@gmail.com</a>
@@ -215,5 +272,9 @@
   </div>
 </footer>
 <script src="site.js" defer></script>
+<script type="importmap">
+{"imports": {"three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"}}
+</script>
+<script type="module" src="hero3d.js"></script>
 </body>
 </html>
