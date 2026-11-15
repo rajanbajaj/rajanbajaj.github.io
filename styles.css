@@ -187,6 +187,11 @@ h2 {
 .write-list a { font-family: var(--serif); font-size: 1.15rem; color: var(--ink); font-weight: 500; }
 .write-list span { color: var(--muted); font-size: .9rem; }
 
+/* Advertisement */
+.ad-block { padding: 2rem 0; border-bottom: 1px solid var(--line); }
+.ad-label { font-family: var(--mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); text-align: center; margin: 0 0 .6rem; }
+.ad-block .adsbygoogle { display: block; width: 100%; min-height: 90px; }
+
 /* Skills */
 .skill-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--line); }
 .skill-groups > div { padding: .9rem 1rem .9rem 0; border-bottom: 1px solid var(--line); }
@@ -218,4 +223,5 @@ h2 {
   .nav-toggle { display: inline-block; }
   .skill-groups { grid-template-columns: 1fr; }
   .spotlight { padding: 1.4rem; }
+  .ad-block { padding: 1.5rem 0; }
 }
