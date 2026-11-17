@@ -106,4 +106,130 @@
       if (el) obs.observe(el);
     });
   }
+
+  // Field-notes journey: stamp sections as visited, remember progress.
+  // Browser-only persistence; the page works the same when storage is off.
+  var STOPS = ["experience", "openlens", "projects", "writing", "office-hours", "contact"];
+  var KEY = "rb-field-notes-v1";
+  var store = { stops: [], best: null };
+  var storageOK = true;
+  try {
+    var saved = window.localStorage.getItem(KEY);
+    if (saved) store = JSON.parse(saved) || store;
+    if (!Array.isArray(store.stops)) store.stops = [];
+    if (store.best !== null && typeof store.best !== "number") store.best = null;
+  } catch (err) {
+    storageOK = false;
+  }
+  function saveJourney() {
+    if (!storageOK) return;
+    try {
+      window.localStorage.setItem(KEY, JSON.stringify(store));
+    } catch (err) {
+      storageOK = false;
+      renderJourney();
+    }
+  }
+  var countEl = document.getElementById("journey-count");
+  var fillEl = document.getElementById("journey-fill");
+  function stamp(id) {
+    var sec = document.getElementById(id);
+    if (!sec || sec.querySelector(".stop-stamp")) return;
+    var h = sec.querySelector("h2");
+    if (!h) return;
+    var s = document.createElement("span");
+    s.className = "stop-stamp";
+    s.textContent = "Logged";
+    h.appendChild(s);
+  }
+  function renderJourney() {
+    var n = store.stops.length;
+    var suffix = storageOK ? "" : " · saving off in this browser";
+    if (countEl) countEl.textContent = n + " of " + STOPS.length + " stops logged" + suffix;
+    if (fillEl) fillEl.style.width = (n / STOPS.length * 100) + "%";
+  }
+  function visit(id) {
+    if (store.stops.indexOf(id) !== -1) return;
+    store.stops.push(id);
+    stamp(id);
+    saveJourney();
+    renderJourney();
+  }
+  STOPS.forEach(function (id) {
+    if (store.stops.indexOf(id) !== -1) stamp(id);
+  });
+  renderJourney();
+  if ("IntersectionObserver" in window) {
+    var seen = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) visit(en.target.id);
+      });
+    }, { threshold: 0.2 });
+    STOPS.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) seen.observe(el);
+    });
+  }
+
+  // Quiz: grade on submit, remember the best score on this device.
+  var quizForm = document.getElementById("quiz-form");
+  if (quizForm) {
+    var quizResult = document.getElementById("quiz-result");
+    var quizReset = document.getElementById("quiz-reset");
+    var quizSubmit = quizForm.querySelector('button[type="submit"]');
+    function setQuizDisabled(disabled) {
+      Array.prototype.forEach.call(quizForm.querySelectorAll("input"), function (input) {
+        input.disabled = disabled;
+      });
+      if (quizSubmit) quizSubmit.disabled = disabled;
+    }
+    quizForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var questions = Array.prototype.slice.call(quizForm.querySelectorAll(".quiz-q"));
+      var score = 0;
+      var answered = 0;
+      questions.forEach(function (q) {
+        q.classList.remove("is-right", "is-wrong");
+        var picked = q.querySelector("input:checked");
+        if (picked && picked.value === q.getAttribute("data-answer")) {
+          score++;
+          answered++;
+          q.classList.add("is-right");
+        } else {
+          if (picked) answered++;
+          q.classList.add("is-wrong");
+        }
+      });
+      var best = (typeof store.best === "number") ? store.best : 0;
+      if (score > best) {
+        store.best = score;
+        saveJourney();
+        best = score;
+      }
+      if (quizResult) {
+        var msg = "You scored " + score + " of " + questions.length + ".";
+        if (answered < questions.length) msg += " Answer every question for a full score.";
+        msg += " Best on this device: " + best + " of " + questions.length + ".";
+        if (!storageOK) msg += " Saving is off in this browser, so the best score won't be kept.";
+        quizResult.textContent = msg;
+        quizResult.hidden = false;
+      }
+      if (quizReset) quizReset.hidden = false;
+      setQuizDisabled(true);
+    });
+    if (quizReset) {
+      quizReset.addEventListener("click", function () {
+        quizForm.reset();
+        Array.prototype.forEach.call(quizForm.querySelectorAll(".quiz-q"), function (q) {
+          q.classList.remove("is-right", "is-wrong");
+        });
+        if (quizResult) {
+          quizResult.textContent = "";
+          quizResult.hidden = true;
+        }
+        quizReset.hidden = true;
+        setQuizDisabled(false);
+      });
+    }
+  }
 })();

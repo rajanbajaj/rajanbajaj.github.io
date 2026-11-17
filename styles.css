@@ -16,6 +16,7 @@
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .journey-line span { transition: none; }
 }
 body {
   margin: 0;
@@ -192,6 +193,27 @@ h2 {
 .ad-label { font-family: var(--mono); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); text-align: center; margin: 0 0 .6rem; }
 .ad-block .adsbygoogle { display: block; width: 100%; min-height: 90px; }
 
+/* Field notes: journey progress, stamps, quiz */
+.journey { font-family: var(--mono); font-size: .72rem; letter-spacing: .04em; color: var(--muted); margin: 0; white-space: nowrap; }
+.journey-line { position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; }
+.journey-line span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .4s ease; }
+.stop-stamp { font-family: var(--mono); font-size: .68rem; letter-spacing: .05em; text-transform: uppercase; color: var(--accent-deep); border: 1px solid var(--accent); border-radius: 20px; padding: .1rem .6rem; margin-left: .5rem; white-space: nowrap; }
+.quiz-lede { font-size: 1.05rem; max-width: 46rem; margin: 0 0 1rem; }
+.quiz-form { margin: 0; display: grid; gap: 1rem; }
+.quiz-q { border: 1px solid var(--line); border-radius: 12px; padding: 1rem 1.1rem; margin: 0; display: grid; gap: .4rem; background: var(--paper); }
+.quiz-q legend { font-family: var(--serif); font-weight: 600; padding: 0 .4em; }
+.quiz-q label { display: flex; gap: .6rem; align-items: baseline; padding: .35rem .5rem; border-radius: 8px; cursor: pointer; }
+.quiz-q label:hover { background: var(--wash); }
+.quiz-q input { accent-color: var(--accent); }
+.quiz-q.is-right { border-color: var(--accent); }
+.quiz-q.is-wrong { border-color: #9c2b1e; }
+.quiz-actions { display: flex; gap: .8rem; margin: 0; flex-wrap: wrap; align-items: center; }
+.btn-ghost { display: inline-block; background: var(--paper); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: .55rem 1.15rem; font: inherit; font-size: .95rem; font-weight: 600; cursor: pointer; }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent-deep); }
+.btn:disabled { opacity: .55; cursor: default; }
+.quiz-result { margin: 0; font-size: .95rem; }
+.quiz-result[hidden] { display: none; }
+
 /* Skills */
 .skill-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--line); }
 .skill-groups > div { padding: .9rem 1rem .9rem 0; border-bottom: 1px solid var(--line); }
@@ -222,6 +244,7 @@ h2 {
   .site-nav { display: none; }
   .nav-toggle { display: inline-block; }
   .skill-groups { grid-template-columns: 1fr; }
+  .journey { display: none; }
   .spotlight { padding: 1.4rem; }
   .ad-block { padding: 1.5rem 0; }
 }

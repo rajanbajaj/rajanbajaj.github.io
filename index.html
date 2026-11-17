@@ -30,7 +30,9 @@
       <a href="#contact">Contact</a>
     </nav>
     <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+    <p class="journey" role="status"><span id="journey-count">0 of 6 stops logged</span></p>
   </div>
+  <div class="journey-line" aria-hidden="true"><span id="journey-fill"></span></div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Sections, mobile" hidden>
     <a href="#experience">Experience</a>
     <a href="#openlens">OpenLens</a>
@@ -171,8 +173,51 @@
       <p class="more"><a href="https://github.com/rajanbajaj?tab=repositories">All 35 repositories on GitHub →</a></p>
     </section>
 
+    <section id="quiz" aria-labelledby="quiz-h">
+      <h2 id="quiz-h"><span class="sec-num">05</span> Check your notes</h2>
+      <p class="quiz-lede">Five questions drawn from this page. Pick one answer per question, then check your score — nothing leaves your browser, and your best score is remembered on this device.</p>
+      <form id="quiz-form" class="quiz-form" novalidate>
+        <fieldset class="quiz-q" data-answer="c">
+          <legend>How many raw records did the inventory platform turn into queryable inventory?</legend>
+          <label><input type="radio" name="q1" value="a"> 943K+ geographic mappings</label>
+          <label><input type="radio" name="q1" value="b"> 202.1B ad requests</label>
+          <label><input type="radio" name="q1" value="c"> 2.45B+ raw records</label>
+        </fieldset>
+        <fieldset class="quiz-q" data-answer="c">
+          <legend>How far did the ClickHouse redesign cut inventory API mean latency?</legend>
+          <label><input type="radio" name="q2" value="a"> 75% (4s to under 1s)</label>
+          <label><input type="radio" name="q2" value="b"> 90% (90-day cycle to 24 hours)</label>
+          <label><input type="radio" name="q2" value="c"> 97.5% (19.36s to 490ms)</label>
+        </fieldset>
+        <fieldset class="quiz-q" data-answer="b">
+          <legend>How much infra spend did the AWS re-architecture remove?</legend>
+          <label><input type="radio" name="q3" value="a"> $16K per month</label>
+          <label><input type="radio" name="q3" value="b"> $144K per year</label>
+          <label><input type="radio" name="q3" value="c"> $4K per month</label>
+        </fieldset>
+        <fieldset class="quiz-q" data-answer="b">
+          <legend>Which flow powers the single sign-on server built for the LMS SaaS?</legend>
+          <label><input type="radio" name="q4" value="a"> API keys only</label>
+          <label><input type="radio" name="q4" value="b"> OAuth2 authorization-code flow</label>
+          <label><input type="radio" name="q4" value="c"> Managed LDAP bind</label>
+        </fieldset>
+        <fieldset class="quiz-q" data-answer="c">
+          <legend>How many stages sit in the OpenLens search pipeline?</legend>
+          <label><input type="radio" name="q5" value="a"> 5 stages</label>
+          <label><input type="radio" name="q5" value="b"> 3 brokers</label>
+          <label><input type="radio" name="q5" value="c"> 10 stages</label>
+        </fieldset>
+        <p class="quiz-actions">
+          <button class="btn" type="submit">Check my score</button>
+          <button class="btn-ghost" type="button" id="quiz-reset" hidden>Try again</button>
+        </p>
+        <p class="quiz-result" id="quiz-result" role="status" hidden></p>
+      </form>
+      <noscript><p>The quiz needs JavaScript; everything else on this page works without it.</p></noscript>
+    </section>
+
     <section id="writing" aria-labelledby="w-h">
-      <h2 id="w-h"><span class="sec-num">05</span> Writing &amp; notes</h2>
+      <h2 id="w-h"><span class="sec-num">06</span> Writing &amp; notes</h2>
       <ul class="write-list">
         <li>
           <a href="https://rbajaj97.medium.com/back-to-fundamentals-journaling-to-give-my-thoughts-a-structure-fbb8986baabb">Back to fundamentals: journaling to give my thoughts a structure</a>
@@ -201,7 +246,7 @@
     </aside>
 
     <section id="office-hours" aria-labelledby="oh-h">
-      <h2 id="oh-h"><span class="sec-num">06</span> Office hours</h2>
+      <h2 id="oh-h"><span class="sec-num">07</span> Office hours</h2>
       <p class="oh-lede">Free 1:1s for students and junior engineers — technical consultations, project reviews, and professional chats. I’m opening these up to gain mentoring experience, so they cost nothing for now. (If this ever becomes a paid offering, this page will say so plainly.)</p>
       <ul class="oh-list">
         <li>
@@ -250,7 +295,7 @@
     </section>
 
     <section class="skills" aria-labelledby="sk-h">
-      <h2 id="sk-h"><span class="sec-num">07</span> Technical skills</h2>
+      <h2 id="sk-h"><span class="sec-num">08</span> Technical skills</h2>
       <div class="skill-groups">
         <div><h3>Languages</h3><p>Python · SQL · JavaScript · PHP · Bash</p></div>
         <div><h3>Data</h3><p>PostgreSQL · ClickHouse (partitioning, materialized views, projections, ReplacingMergeTree) · MySQL · MongoDB · Parquet · S3-backed pipelines · chunked &amp; streaming file processing</p></div>
@@ -262,7 +307,7 @@
     </section>
 
     <section id="contact" class="contact" aria-labelledby="c-h">
-      <h2 id="c-h"><span class="sec-num">08</span> Contact</h2>
+      <h2 id="c-h"><span class="sec-num">09</span> Contact</h2>
       <p class="contact-lede">The fastest way to reach me is email. I’m happy to talk about backend &amp; data roles, ad-tech measurement, or open source.</p>
       <p class="contact-row">
         <a class="btn" href="mailto:rajanbajajkota+consultations@gmail.com">rajanbajajkota+consultations@gmail.com</a>
